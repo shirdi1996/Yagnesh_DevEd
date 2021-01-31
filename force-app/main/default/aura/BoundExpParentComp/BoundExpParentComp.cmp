@@ -1,0 +1,12 @@
+<aura:component>
+
+    <aura:attribute name="parentAttributeName" type="String" default="Parent Value"/>
+
+   <p> Value of the Parent attribute:  {!v.parentAttributeName}</p>
+
+    <c:BoundExpChildComp childAttributeName="{!v.parentAttributeName}" />   <!--Bound Expression-->
+
+    <lightning:button label="Change parent attribute value"
+          onclick="{!c.ChangeParentAttributeValue}"/>
+
+</aura:component>

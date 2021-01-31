@@ -1,0 +1,13 @@
+public class searchAccountController {
+@AuraEnabled
+ public static List < account > fetchAccount(String searchKeyWord) {
+  String searchKey = searchKeyWord + '%';
+  List < Account > returnList = new List < Account > ();
+  List < Account > lstOfAccount = [select id, Name, Type, Industry, Phone, Fee__c, AnnualRevenue from account where Name LIKE: searchKey limit 1];
+
+  for (Account acc: lstOfAccount) {
+   returnList.add(acc);
+  }
+  return returnList;
+ }
+}

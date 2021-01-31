@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>shirdi1996@gmail.com</contactEmail>
+    <contactPhone>16097272416</contactPhone>
+    <label>WebtoCase</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost:8080</callbackUrl>
+        <consumerKey>3MVG9YDQS5WtC11qbwhwDiWqD8ASkI6uhxUrgu9cxP8D3hTWJuEJc9m5y66m1eF_gacNmfdHou_bhnu4dieW6</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

@@ -1,0 +1,8 @@
+<apex:page standardController="Acount__c">
+<script>
+   
+   window.onload = function(){ if({!Acount__c.Display_Alert__c})
+        alert("Display Alert!!");
+</script>
+
+</apex:page>

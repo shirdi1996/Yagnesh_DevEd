@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Lead Queue</name>
+    <queueMembers>
+        <users>
+            <user>andy1996@andy.com</user>
+            <user>customer_support_community@dwaraka-developer-edition.ap4.force.com</user>
+            <user>integration@00d6f000002l1pyua0.com</user>
+            <user>rob1996@rob.com</user>
+            <user>shirdi19961@gmail.com</user>
+            <user>sam1996@sam.com</user>
+            <user>insightssecurity@00d6f000002l1pyua0.com</user>
+            <user>sai@shirdi.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

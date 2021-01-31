@@ -1,0 +1,12 @@
+<apex:page controller="Custom">
+    <apex:form >
+        <apex:pageblock title="Custom Controller Example Page">
+            <apex:pageBlockSection title="Page Block Section Design" columns="1">
+            	<apex:outputLabel > Enter Your Name </apex:outputLabel>
+            	   	<apex:inputText value="{!name}"/>
+                    <apex:commandButton value="Click Here" action="{!showmessage}" reRender="MyId"  />
+                <apex:outputLabel id="MyId"> '{!message}'</apex:outputLabel>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

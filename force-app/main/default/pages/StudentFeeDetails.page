@@ -1,0 +1,25 @@
+<apex:page controller="RegisteredStudentList" sidebar="false">
+   <apex:pageBlock title="Student Panel">
+    <apex:pageBlockTable value="{!stdListWrapper}" var="stw">
+        <apex:column headerValue="Id"><apex:outputField value="{!stw.stud.id}"/>  
+        </apex:column>
+        
+        <apex:column headerValue="Name"><apex:outputField value="{!stw.stud.Name}"/>
+        </apex:column>
+        <apex:column headerValue="City"><apex:outputField value="{!stw.stud.City__c}"/>
+        </apex:column>
+        
+        <apex:column headerValue="Date of Birth"><apex:outputField value="{!stw.stud.Date_of_Birth__c}"/>
+        </apex:column>
+        <apex:column headerValue="Courses"><apex:outputText value="{!stw.crsDet}"/>
+        </apex:column>
+        <apex:column headerValue="Payable amount"><apex:outputText value="{!stw.payable}"/>
+        </apex:column>
+        <apex:column headerValue="Paid Amount"><apex:outputText value="{!stw.paid}"/>
+        </apex:column>
+        <apex:column headerValue="Remainimg Balance"><apex:outputText value="{!stw.remain}"/>
+        </apex:column>
+        
+    </apex:pageBlockTable>
+       </apex:pageBlock> 
+</apex:page>

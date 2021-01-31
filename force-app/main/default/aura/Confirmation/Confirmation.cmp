@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable">
+     
+    <!--Attributes-->
+    <aura:attribute name="showConfirmDialog" type="boolean" default="false"/>
+     
+    <!--Component Start-->
+    <div class="slds-m-around_xx-large">
+        <lightning:button name="delete" variant="brand" label="Delete" onclick="{!c.handleConfirmDialog}"/>
+    </div>
+    <!--Component End-->
+</aura:component>

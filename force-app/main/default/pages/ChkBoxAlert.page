@@ -1,0 +1,6 @@
+<apex:page standardController="Students__c" rendered="{!Students__c.Pop_Up_Confirmation__c}">
+  <script type="text/javascript">
+        if({!Students__c.Pop_Up_Confirmation__c})
+            alert('Display Alert!!');
+    </script>
+</apex:page>

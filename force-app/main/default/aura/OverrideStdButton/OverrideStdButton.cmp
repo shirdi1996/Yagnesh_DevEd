@@ -1,0 +1,8 @@
+<aura:component implements="lightning:actionOverride" access="global">
+     
+    <!--Component Start-->
+    <div class="slds-m-around--xx-large">
+        Standard button override demo
+    </div>
+    <!--Component End-->
+</aura:component>

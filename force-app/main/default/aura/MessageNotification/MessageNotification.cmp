@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="backgroundColour" type="String"/>
+    <div style="{! 'background-color:' + v.backgroundColour }">
+        <lightning:layout horizontalAlign="space">
+            <lightning:layoutItem padding="around-small" flexibility="auto">
+                <lightning:icon class="alert" iconName="utility:alert" alternativeText="Alert!" variant="Alert" size="medium"/>
+                
+                <lightning:formattedText value="{!v.message}" />
+                
+            </lightning:layoutItem>
+        </lightning:layout >
+    </div>
+</aura:component>

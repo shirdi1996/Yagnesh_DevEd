@@ -1,0 +1,11 @@
+<apex:page controller="NewAccountsVFController">
+    <apex:pageBlock title="New Accounts List" id="accounts_list" tabStyle="Account">
+    
+    <li>
+        <apex:repeat value="{!NewAccounts}" var="Account" rendered="true" > 
+        <p><apex:outputLink value="/{!Account.ID}">{!Account.Name}</apex:outputLink></p>
+        </apex:repeat>
+    </li>
+    
+    </apex:pageBlock>
+</apex:page>

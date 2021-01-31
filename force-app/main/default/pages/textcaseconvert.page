@@ -1,0 +1,9 @@
+<apex:page controller="LowerCase_to_UpperCase_Controller">
+<apex:form >
+Value <apex:inputText value="{!value}"/><br/>
+lower<apex:outputText id="id1" value="{!lower}" /><br/>
+upper<apex:outputText id="id2" value="{!upper}" /><br/>
+
+<apex:commandButton action="{!change}" value="Change" reRender="id1,id2"/>
+</apex:form>
+</apex:page>

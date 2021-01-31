@@ -1,0 +1,29 @@
+<aura:component controller = "CarTypeSearch" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="buttonlabel" type="string" default="Search Button"/>
+    <aura:attribute name="newlabel" type="string" default="New Button"/>
+    <aura:attribute name="isNewAvaialbale" type="Boolean" default="False"/>
+    <aura:attribute name="showNew" type="boolean" default="false"/>
+    <aura:attribute name="cartypes" type="String[]"  />
+    <aura:handler name="init" value="{!this}" action ="{!c.doInit}"/>
+    <aura:handler name="render" value="{!this}" action ="{!c.handleRender}"/>
+    <lightning:layout horizontalAlign = "center">
+        <lightning:layoutItem padding ="around-medium">  
+            <lightning:select name ="selectItem" aura:Id ="CarType" label="All Types" variant="label-hidden" value="" onchange="{!c.carselected}">
+                <option value=" " text="All Types"/>
+                <aura:iteration items= "{!v.cartypes}" var ="CarType">
+                    <option value="{!CarType}" text="{!CarType}"/>
+                </aura:iteration>
+            </lightning:select> 
+        </lightning:layoutItem>
+        <lightning:layoutItem padding = "around-medium">
+            <lightning:button label="{!v.buttonlabel}" onclick="{!c.onSearchClick}" variant= "brand"/>
+            <lightning:button label="ToggleButton" onclick="{!c.toggleButton}" variant= "neutral"/>
+            <aura:if isTrue= "{!v.showNew}">
+                <lightning:button label="{#newlabel}"  variant="neutral" onclick="{!createRecord}"/>
+                <aura:set attribute="else">
+                    New BUtton cannot be Added Here
+                </aura:set>
+            </aura:if>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

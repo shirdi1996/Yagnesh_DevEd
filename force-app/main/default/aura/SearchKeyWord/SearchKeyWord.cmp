@@ -1,0 +1,17 @@
+<aura:component controller="searchAccountController" >
+    <aura:attribute name="keywordHolder" type="string" /> 
+   <!-- // Declaring attribute to hold value -->
+    <aura:attribute name="accountList" type="list" />
+    <!-- // Declaring attribute to hold account list-->
+    <lightning:input name="AccountSearch"  label="Enter Account Name" value="{!v.keywordHolder}"/> 
+    <!--  // Linking user input with attribute through value parameter.-->
+    <lightning:button label="Search Account" onclick="{!c.findAccount}" />
+    <aura:iteration var="acc" items="{!v.accountList}" >  <!-- // Displaying list of account-->
+    {!acc.Name}
+    {!acc.type}
+    {!acc.Fee__C}
+    {!acc.AnnualRevenue}
+    
+        
+    </aura:iteration> 
+</aura:component>

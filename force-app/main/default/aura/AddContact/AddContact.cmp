@@ -1,0 +1,8 @@
+<aura:component controller="ContactInsertClass" implements="force:hasRecordId,flexipage:availableForAllPageTypes,lightning:actionOverride">
+    <aura:attribute name="firstName" type="string"/>
+    <aura:attribute name="lastName" type="string"/>
+    <lightning:input label="Enter First Name" value="{!v.firstName}"/>
+    <lightning:input label="Enter Last Name" value="{!v.lastName}"/>
+    <lightning:button label="Add contact" onclick="{!c.addContact}"/>
+
+</aura:component>

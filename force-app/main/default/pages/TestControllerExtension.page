@@ -1,0 +1,34 @@
+<apex:page standardcontroller="Account" extensions="controllerextensionexample"  >
+    <apex:form >
+		<apex:pageBlock title="Extended Controller Block">
+            <apex:pageBlockSection title="Something Personal and not from Any Object..Info coming from Apex Class">
+                <apex:pageBlockSectionItem ><apex:commandButton value="Greetings" reRender="id1" action="{!showGreeting}"/>             
+                </apex:pageBlockSectionItem>
+            	<apex:pageBlockSectionItem ><apex:outputLabel id="id1">{!message}</apex:outputLabel></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>    
+    	
+        <apex:pageBlock title="Standard Controller Activation to get Account Details and save Account records">
+            <apex:pageBlockSection title="Account Details for You to glance" columns="2">
+                <apex:pageBlockSectionItem >
+                	<apex:inputField value="{!Account.Name}" required="false"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:commandButton value="Standard Save" action="{!Save}"/>
+                </apex:pageBlockSectionItem>
+        	</apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Standard controller use to pull records, but save the records using custom SAVE METHOD">
+            <apex:pageBlockSection title="Access objects using std controller but save using extensions --custom METHOD">
+            	<apex:pageBlockSectionItem >
+                	<apex:inputfield value="{!Account.Name}" required="false" />
+                </apex:pageBlockSectionItem>
+            	<apex:pageBlockSectionItem >
+                	<apex:commandButton value="Save calling a Method" action="{!mysave}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
